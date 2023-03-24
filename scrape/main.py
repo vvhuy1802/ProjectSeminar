@@ -3,6 +3,24 @@ import requests
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
+from firebase_admin import credentials
+from firebase_admin import firestore,firestore_async
+import firebase_admin
+
+credpath = "D:\Downloads\web-scraping-67540-firebase-adminsdk-5qm46-b6217d25cb.json"
+
+#initialize firebase
+
+firebase_admin.initialize_app(credentials.Certificate(credpath))
+
+db=firestore.client()
+
+#reading data from firebase
+data = {"name": "Los Angeles", "state": "CA", "country": "USA"}
+
+# Add a new doc in collection 'cities' with ID 'LA'
+db.collection("cities").document("LA").set(data)
+
 
 
 def Find_Jobs_In_TopCV():
