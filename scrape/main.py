@@ -7,7 +7,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore,firestore_async
 import firebase_admin
 
-credpath = "D:\Downloads\web-scraping-67540-firebase-adminsdk-5qm46-b6217d25cb.json"
+credpath = 'scrape/web-scraping-67540-firebase-adminsdk-5qm46-d1a7fa09d5.json'
 
 #initialize firebase
 
