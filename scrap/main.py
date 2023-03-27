@@ -24,6 +24,10 @@ data = {"name": "Los Angeles", "state": "CA", "country": "USA"}
 totalJobs = []
 
 
+def formatContent(text):
+    return text.replace('\n', '').replace('\xa0', ' ').replace('\t', ' ')
+
+
 def Get_Data(jobs, search):
     if (len(jobs) > 0):
         for job in jobs:
@@ -84,7 +88,7 @@ def Get_Data(jobs, search):
                             arrLi += li.text + '| '
                     Description.append({
                         'title': titles[count].text,
-                        'content': arrLi.replace('\n', '').replace('\xa0', ' ')
+                        'content': formatContent(arrLi)
                     })
                 # in p have <br> tag will be in a new line
                 elif (content.find('p')):
@@ -100,18 +104,18 @@ def Get_Data(jobs, search):
                             arrP += pTags[i].text + '| '
                     Description.append({
                         'title': titles[count].text,
-                        'content': arrP.replace('\n', '').replace('\xa0', ' ')
+                        'content': formatContent(arrP)
                     })
                 elif content.find('strong') != None:
                     content.find('strong').decompose()
                     Description.append({
                         'title': titles[count].text,
-                        'content': content.text.replace('\n', '').replace('\xa0', ' ')
+                        'content': formatContent(content.text)
                     })
                 else:
                     Description.append({
                         'title': titles[count].text,
-                        'content': content.text.replace('\n', '').replace('\xa0', ' ')
+                        'content': formatContent(content.text)
                     })
                 count += 1
             # print(f'Description: {Description}' + '\n')
@@ -154,7 +158,6 @@ def Find_Jobs_In_TopCV(job_name):
     Get_Data(jobs, search)
     Get_Data(jobs_highlight, search)
 
-
 def Write_To_File(job_name):
     with open(f'scrap/jobs/{job_name}.txt', 'w', encoding='utf-8') as f:
         f.writelines(f"Total Jobs Found: {len(totalJobs)} \n")
@@ -176,15 +179,15 @@ def Write_To_File(job_name):
 
 
 Job_Need_To_Scrap = [
-    # "React Native",
-    # "ReactJS",
-    # "NodeJS",
-    # "VueJS",
-    # "Angular",
-    # "Laravel",
-    # "PHP",
+    "React Native",
+    "ReactJS",
+    "NodeJS",
+    "VueJS",
+    "Angular",
+    "Laravel",
+    "PHP",
     "Python",
-    # "Java",
+    "Java",
 ]
 
 if __name__ == '__main__':
