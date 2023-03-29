@@ -70,6 +70,9 @@ def Get_Data(jobs, search):
             Description = []
             jobDescription = soup.find('div', class_='job-data')
             titles = jobDescription.find_all('h3')
+            salary = soup.find('div', class_="box-item")
+            if salary != None:
+                salary = formatContent(salary.find('span').text)
             if (len(titles) == 0):
                 titles = jobDescription.find_all('h2')
             contents = jobDescription.find_all('div', class_='content-tab')
@@ -127,10 +130,12 @@ def Get_Data(jobs, search):
                 'detailJobLink': detailJobLink,
                 'linkToCompany': linkToCompany,
                 'website': website,
+                'salary': salary,
                 'address': address,
                 'simpleInfo': simpleInfo,
                 'description': Description
             })
+            break
 
 
 def Find_Jobs_In_TopCV(job_name):
@@ -158,6 +163,7 @@ def Find_Jobs_In_TopCV(job_name):
     Get_Data(jobs, search)
     Get_Data(jobs_highlight, search)
 
+
 def Write_To_File(job_name):
     with open(f'scrap/jobs/{job_name}.txt', 'w', encoding='utf-8') as f:
         f.writelines(f"Total Jobs Found: {len(totalJobs)} \n")
@@ -173,6 +179,7 @@ def Write_To_File(job_name):
             f.writelines(f"Link to Company: {job.get('linkToCompany')} \n")
             f.writelines(f"Website: {job.get('website')} \n")
             f.writelines(f"Address: {job.get('address')} \n")
+            f.writelines(f"Salary: {job.get('salary')} \n")
             f.writelines(f"Simple Info: {job.get('simpleInfo')} \n")
             f.writelines(f"Description: {job.get('description')} \n")
             f.writelines(f"{'-' * 50} \n")
@@ -180,14 +187,14 @@ def Write_To_File(job_name):
 
 Job_Need_To_Scrap = [
     "React Native",
-    "ReactJS",
-    "NodeJS",
-    "VueJS",
-    "Angular",
-    "Laravel",
-    "PHP",
-    "Python",
-    "Java",
+    # "ReactJS",
+    # "NodeJS",
+    # "VueJS",
+    # "Angular",
+    # "Laravel",
+    # "PHP",
+    # "Python",
+    # "Java",
 ]
 
 if __name__ == '__main__':
