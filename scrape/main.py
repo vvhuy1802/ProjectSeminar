@@ -140,15 +140,16 @@ def Find_Job_In_ITVIEC(search_key):
             else:
              for j in range(0,3):
               get_content+=content_one.find_all('li')[j].text+"| "
-             
-            all_content.append(get_content)
+            new_content = get_content.replace("\xa0", "").replace("\n", "")
+            all_content.append(new_content)
         else:
             get_title=title[i].text
             all_title.append(get_title)
             find=content[i-1].find_all('li')
             for k in range(0,len(find)):
                 get_content+=find[k].text+"| "
-            all_content.append(get_content)
+            new_content = get_content.replace("\xa0", "").replace("\n", "")
+            all_content.append(new_content)
      sleep(5)
     # trở về trang đầu tiên để lặp tiếp
      print(all_content)
