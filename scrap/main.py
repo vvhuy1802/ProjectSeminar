@@ -60,10 +60,10 @@ def Get_Data(jobs, search):
             for info in infos:
                 temp = info.text
                 if info.get('class') == ['address']:
-                    address = info.text
+                    address = formatContent(info.text)
                     # print(f'Address: {address}' + '\n')
                 if info.get('class') == ['deadline']:
-                    temp = info.text.replace('\n', '')
+                    temp = formatContent(info.text)
                 simpleInfo.append(temp)
             # print(f'Simple Info: {simpleInfo}' + '\n')
             # Job Description
@@ -165,8 +165,8 @@ def Find_Jobs_In_TopCV(job_name):
     jobs_highlight = soup.find_all(
         'div', class_='job-item-default bg-highlight job-ta')
 
-    Get_Data(jobs, search)
-    Get_Data(jobs_highlight, search)
+    Get_Data(jobs, job_name)
+    Get_Data(jobs_highlight, job_name)
 
 
 def Write_To_File(job_name):
@@ -308,7 +308,7 @@ def Find_Job_In_ITVIEC(search_key):
             'h3', class_="employer-long-overview__name hidden-xs d-none d-sm-block")
         company_name = company_find.find('a').text
         link_company = urlmain+company_find.find('a').get('href')
-        description=[]
+        description = []
         for i in range(0, len(title)):
             get_content = ""
             if (i == 0):
@@ -336,7 +336,7 @@ def Find_Job_In_ITVIEC(search_key):
         sleep(5)
     # trở về trang đầu tiên để lặp tiếp-
         data = {
-            "description":description,
+            "description": description,
             "image": src,
             "job_name": name,
             "web_name": "ITViec",
@@ -352,21 +352,22 @@ def Find_Job_In_ITVIEC(search_key):
         driver.back()
     totalJobs.extend(total_data)
     data_total = {
-        search_key: totalJobs
+        'data': totalJobs
     }
-    db.collection("Totals").document(search_key).set(data_total)
+    docs = search_key.replace(" ", "_")
+    db.collection("Totals").document(docs).set(data_total)
 
 
 Job_Need_To_Scrap = [
     "React Native",
-    # "ReactJS",
-    # "NodeJS",
-    # "VueJS",
-    # "Angular",
-    # "Laravel",
-    # "PHP",
-    # "Python",
-    # "Java",
+    "ReactJS",
+    "NodeJS",
+    "VueJS",
+    "Angular",
+    "Laravel",
+    "PHP",
+    "Python",
+    "Java",
 ]
 
 if __name__ == '__main__':
