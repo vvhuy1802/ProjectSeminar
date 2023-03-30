@@ -75,6 +75,9 @@ def Get_Data(jobs, search):
             if salary != None:
                 salary = formatContent(salary.find('span').text)
             titles = jobDescription.find_all('h3')
+            salary = soup.find('div', class_="box-item")
+            if salary != None:
+                salary = formatContent(salary.find('span').text)
             if (len(titles) == 0):
                 titles = jobDescription.find_all('h2')
             contents = jobDescription.find_all('div', class_='content-tab')
@@ -137,6 +140,7 @@ def Get_Data(jobs, search):
                 'require': simpleInfo,
                 'description': Description
             })
+            break
 
 
 def Find_Jobs_In_TopCV(job_name):
@@ -355,14 +359,14 @@ def Find_Job_In_ITVIEC(search_key):
 
 Job_Need_To_Scrap = [
     "React Native",
-    "ReactJS",
-    "NodeJS",
-    "VueJS",
-    "Angular",
-    "Laravel",
-    "PHP",
-    "Python",
-    "Java",
+    # "ReactJS",
+    # "NodeJS",
+    # "VueJS",
+    # "Angular",
+    # "Laravel",
+    # "PHP",
+    # "Python",
+    # "Java",
 ]
 
 if __name__ == '__main__':
