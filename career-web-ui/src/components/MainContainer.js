@@ -1,12 +1,11 @@
-import React, { useEffect, useRef,useState } from 'react'
+import React, { useEffect, useRef, useState } from "react";
+import {Search} from "./index";
 const MainContainer = () => {
-    return(
-        <div className='w-full h-auto flex flex-col'>
-            <div className='w-full h-auto flex flex-col'>
-                <h1 className='text-2xl md:text-4xl font-bold text-center'>Main Container</h1>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Search/>
+    </div>
+  );
+};
 
-export default MainContainer
+export default MainContainer;

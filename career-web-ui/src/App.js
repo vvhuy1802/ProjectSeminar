@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { MainContainer } from "./components";
-import {Route,Routes} from "react-router-dom"
+import { MainContainer, NavBar, Footer } from "./components";
+import { Route, Routes } from "react-router-dom";
 import { db } from "./firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import { setTotalJobs } from "./redux/Slices/Global";
@@ -21,13 +21,14 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen h-auto flex flex-col bg-primary">
-      {/* <Header /> */}
-      <main className='mt-14 md:mt-20 px-4 md:px-16 py-4 w-full '>
+    <div className="w-[90%] m-auto bg-white">
+      <NavBar />
+      <main>
         <Routes>
-          <Route path="/*" element={<MainContainer/>} />
+          <Route path="/*" element={<MainContainer />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

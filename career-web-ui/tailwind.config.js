@@ -47,15 +47,10 @@ module.exports = {
         "2xl":"1536px",
       },
       colors:{
-        headingColor:"#2e2e2e",
-        textColor:"#515151",
-        cartNumBg:"#e80013",
-        primary:"#f5f3f3",
-        cardOverplay:"rgba(255,255,255,0.8)",
-        lighttextGray:"#9ca0ab",
-        cardBg:'#282a2c',
-        cartitem:'#2e3033',
-        cartTotal:'#343739'
+        'blueColor':'#2a68ff',
+        'greyIsh':'#f1f4f8',
+        'cardShadow':'#f7f8f9',
+        'textColor':'#252b36',
       }
     },
   },
