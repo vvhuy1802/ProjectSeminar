@@ -5,6 +5,11 @@ import {Route,Routes} from "react-router-dom"
 import { db } from "./firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import { setTotalJobs } from "./redux/Slices/Global";
+import NavBar from "./components/NavBar/NavBar";
+import Search from "./components/SearchDiv/Search";
+import Job from "./components/JobDiv/Job";
+import Value from "./components/ValueDiv/Value";
+import Footer from "./components/FooterDiv/Footer";
 function App() {
   const dispatch = useDispatch();
 
@@ -21,13 +26,12 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen h-auto flex flex-col bg-primary">
-      {/* <Header /> */}
-      <main className='mt-14 md:mt-20 px-4 md:px-16 py-4 w-full '>
-        <Routes>
-          <Route path="/*" element={<MainContainer/>} />
-        </Routes>
-      </main>
+    <div className="w-[85%] m-auto bg-white">
+      <NavBar/>
+      <Search/>
+      <Job/>
+      <Value/>
+      <Footer/>
     </div>
   );
 }
