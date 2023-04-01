@@ -1,7 +1,7 @@
 Total Jobs Found: 22 
-Create at: Thu Mar 30 17:57:56 2023 
+Create at: Fri Mar 31 14:57:47 2023 
 -------------------- 
-Tag: react-native 
+Tag: React Native 
 Image Company: https://cdn.topcv.vn/150/company_logos/62ca7bf9f94a0ec7c16fb4575448c9f6-60c860fb5932a.jpg 
 Job Name: React Native 
 Company Name: CÔNG TY TNHH YOUMED VIỆT NAM 
@@ -10,10 +10,10 @@ Link Company: https://www.topcv.vn/cong-ty/cong-ty-tnhh-youmed-viet-nam/69942.ht
 Salary: Thoả thuận 
 Website: TopCV 
 Location: Hồ Chí Minh 
-Require: ['Hồ Chí Minh', '\nCòn 31 ngày để ứng tuyển\n'] 
+Require: ['Hồ Chí Minh', '\nCòn 30 ngày để ứng tuyển\n'] 
 Description: [{'title': 'Mô tả công việc', 'content': 'Tham gia phát triển và xây dựng các sản phẩm dựa trên nền React Native| Tìm hiểu công nghệ, xây dựng mới và phát triển tính năng hiện tại của các dự án| Quản lý và bảo trì, cải thiện các ứng dụng hiện có| Hỗ trợ sửa lỗi trong quá trình triển khai| Đảm bảo tiến độ, chất lượng công việc và báo cáo thường xuyên tới quản lý.'}, {'title': 'Yêu cầu ứng viên', 'content': 'Có tối thiểu 1 năm kinh nghiệm trong lĩnh vực phát triển ứng dụng di động| Có kinh nghiệm làm việc với React Native | Khả năng làm việc tốt với Native code| Sử dụng thành thạo các thư viện React Native phổ biến, Redux, Redux-thunk, Redux-saga, react-navigation…| Có kinh nghiệm trong việc tối ưu hiệu suất ứng dụng (memory usage, memory leak, cache…)| Kỹ năng phân tích, tư duy logic tốt, chuyên nghiệp| Cẩn thận, chi tiết, có trách nhiệm cao, sẵn sàng học hỏi, chia sẻ và cải thiện'}, {'title': 'Quyền lợi', 'content': 'Lương thỏa thuận theo năng lực| Lương tháng 13| Thưởng quý, thưởng năm theo quy định.| Hưởng đầy đủ các loại bảo hiểm theo quy định của nhà nước| Bảo hiểm chăm sóc sức khỏe| Quà sinh nhật, kết hôn, đám cưới, sinh con, thăm hỏi ốm đau| Hoạt động kết nối: team building, happy hour, liên hoan nhóm| Môi trường làm việc trẻ trung, năng động, nhiệt huyết| Cơ hội học hỏi nâng cao kiến thức chuyên môn và cơ hội thăng tiến'}] 
 -------------------------------------------------- 
-Tag: react-native 
+Tag: React Native 
 Image Company: https://cdn.topcv.vn/150/company_logos/cong-ty-tnhh-vi-tinh-vu-thao-5d42b326ada9e.jpg 
 Job Name: Dev Mobile (React Native) 
 Company Name: Công ty Cổ phần Công Nghệ Vũ Thảo 
@@ -22,7 +22,7 @@ Link Company: https://www.topcv.vn/cong-ty/cong-ty-co-phan-cong-nghe-vu-thao/880
 Salary: Thoả thuận 
 Website: TopCV 
 Location: Hồ Chí Minh 
-Require: ['Hồ Chí Minh', '\nCòn 27 ngày để ứng tuyển\n'] 
+Require: ['Hồ Chí Minh', '\nCòn 26 ngày để ứng tuyển\n'] 
 Description: [{'title': 'Mô tả công việc', 'content': '- Tham gia phát triển các hệ thống ứng dụng trên thiết bị di động android/ IOS.| - Tham gia phát triển ứng dụng cho các dự án eOffice điện tử, thương mại điện tử, làm việc theo sự phân công của cấp quản lý.| - Sửa chữa, nâng cấp hệ thống ứng dụng, phát triển các yêu cầu bổ sung tính năng.| - Làm việc với các ngôn ngữ lập trình React Native, lưu trữ dữ liệu trên thiết bị di động SQLite và giao tiếp API thông qua dữ liệu có cấu trúc Json.| - Làm việc nhóm, phối hợp với thành viên khác cùng nhau giải quyết vấn đề.| - Báo cáo tiến độ hằng ngày, hằng tuần cho trưởng nhóm.'}, {'title': 'Yêu cầu ứng viên', 'content': '• Tốt nghiệp Cao đẳng/ Đại học chuyên ngành CNTT, Toán Tin, Viễn thông…| • Có tối thiểu 1 năm kinh nghiệm ở vị trí tương đương.| • Hiểu biết về .NET Framework| • Có kiến thức về lập trình hướng đối tượng| • Hiểu và sử dụng thành thạo các Controllers| • Có kiến thức SQLite Server và thành thạo truy vấn SQL (SQL Query)| • Thành thạo ngôn ngữ lập trình React Native.| • Có khả năng đọc hiểu tài liệu tiếng Anh cơ bản.| • Có tư duy logic tốt + khả năng tự học| • Có trách nhiệm, nhiệt huyết với công việc'}, {'title': 'Quyền lợi', 'content': '- Mức lương và thu nhập theo năng lực| - Làm việc trong môi trường năng động trẻ trung, thỏa sức sáng tạo| - Chế độ khen thưởng và phúc lợi phong phú| - Cơ hội đào tạo, phát triển và thăng tiến| - Các chế độ theo Luật lao động hiện hành và các phúc lợi theo quy định của Công ty.'}] 
 -------------------------------------------------- 
 Tag: React Native 
@@ -254,14 +254,14 @@ Require: ['React Native', 'Android', 'iOS']
 Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Lương, thưởng hấp dẫn| Chế độ, điều kiện làm việc "siêu" tốt| Được chủ động trong công việc| '}, {'title': 'Job Description', 'content': ''}, {'title': 'Your Skills and Experience', 'content': ''}, {'title': "Why You'll Love Working Here", 'content': ''}] 
 -------------------------------------------------- 
 Tag: React Native 
-Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNW8yREE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9339c6d9e56b39d6a41f9f4039c0b380ff566777/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--a9d835d302ad9f096170a85b9d142ff095a42b9d/hdv-mobisoft-logo.png 
-Job Name: Android Developer (Java, React Native) - Up to $1500 
-Company Name: HDV Mobisoft 
-Job Link: https://itviec.com//it-jobs/android-developer-java-react-native-up-to-1500-hdv-mobisoft-1048?lab_feature=preview_jd_page 
-Link Company: https://itviec.com//companies/hdv-mobisoft 
-Salary: You'll love it 
+Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMEFyREE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a7fac919ec7a8d1409f403c1a6a61627bb8bb11/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--d92c0e864c4429e9d0ed68ed6233d8baecafcd3f/beetsoft-logo.jpg 
+Job Name: PHP Developer 
+Company Name: Beetsoft 
+Job Link: https://itviec.com//it-jobs/php-developer-beetsoft-0238?lab_feature=preview_jd_page 
+Link Company: https://itviec.com//companies/beetsoft 
+Salary: 1,000 - 1,800 USD 
 Website: ITViec 
 Location: Ha Noi 
-Require: ['Android', 'Java', 'React Native'] 
-Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Mức lương cạnh tranh hấp dẫn, review hàng năm| Lương - Thưởng hấp dẫn| Key member được cử sang Mỹ đào tạo hàng năm| '}, {'title': 'Job Description', 'content': 'Tham gia dự án xây dựng ứng dụng Mobile phục vụ khách hàng ở Việt Nam, Mỹ, Hà Lan, hoàn thành các công việc được phân công đúng thời hạn;| Thực hiện thiết kế, lập trình,fix lỗi, báo cáo và phân tích số liệu;| Lập yêu cầu, phát triển/kiểm tra nội dung lập trình, đảm bảo sản phẩm được phát hành đúng thời hạn dự kiến;| Tuân thủ cách thức và hướng dẫn phát triển phần mềm của công ty;| Tương tác với người sử dụng để tìm hiểu và thực hiện các yêu cầu dự án;| Tương tác với đội hỗ trợ hệ thống để triển khai sản phẩm và đào tạo;| Cập nhật các tài liệukỹ thuật của dự án khi được yêu cầu.| '}, {'title': 'Your Skills and Experience', 'content': 'Tốt nghiệp đại học ngành công nghệ thông tin hoặc tương đương;| Có ít nhất2 năm kinh nghiệm trong lĩnh vực xây dựng ứng dụng Mobile;| Kỹ năng giao tiếp tiếng Anh cần thiết:đọc hiểu,trao đổi, thảo luận nhóm; làm việc theo nhóm…| Ít nhất 2 năm kinh nghiệm phát triển ứng dụng Android (Native, React Native hoặc Hybrid…)| Có khả năng làm việc độc lập, làm việc nhóm| Có kiến thức tốt và kinh nghiệm lập trình hướng đối tượng| Có chuyên môn vững về Android SDK, Google API, Android Developer Frameworks;| Thành thạo các công cụ phát triển Core Java/ Core Android/ Google APIs/Android;| Có kinh nghiệm phát triển ứng dụng với mô hình MVVM, Clean Architecture| Có kinh nghiệm tích hợp ứng dụng với bên thứ ba, sử dụng các SDK hoặc APIs;| Có kinh nghiệm sử dụng SQL, SQLite;| Có kinh nghiệm về Agile hoặc Agile-based;| BiếtKotlin là 1 lợi thế| Có kinh nghiệm làm việc với JavaScript/CSS/HTML là một lợi thế.| '}, {'title': "Why You'll Love Working Here", 'content': 'Mức lương cạnh tranh kèm theo thưởng (Up to1500USD);| Thưởng các dịp lễ, tết, sinh nhật.| Môi trường làm việc trẻ trung, năng động, linh hoạt, đề cao tính sáng tạo, tạo thuận lợi tối đa cho việc phát triển chuyên môn và sự nghiệp của từng nhân viên;| Môi trường làm việc quốc tế, được đào tạo trực tiếp với chuyên gia nước ngoài, có nhiều cơ hội học hỏi và phát triển;| Đánh giá tăng lương định kỳ hàng năm| 5 ngày làm việc/tuần;| Trà, bánh, hoa quả hàng ngày, liên hoan hàng tháng; và các hoạt động khác: sinh nhật, xem phim ...| Du lịch công ty ít nhất3 lần/năm| Các hoạt động teambuilding: Bi-a, Yoga và đi bơi hàng tuần.| '}] 
+Require: ['PHP', 'Java', 'React Native'] 
+Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Thu nhập tương xứng với giá trị, đóng góp| Làm việc 5 ngày/tuần, nghỉ T7, CN| Môi trường làm việc cởi mở, chuyên nghiệp| '}, {'title': 'Job Description', 'content': 'Tham gia phát triển sản phẩm cho khách hàng Nhật Bản| Phụ trách phát triển, maintain hệ thống về E-commerce, web & App| Phân tích nghiệp vụ, yêu cầu người dùng, yêu cầu hệ thống.| Thiết kế, Code, review code, test.| Tiếp nhận và đánh giá dự án, tư vấn các công nghệ có thể áp dụng vào dự án| Tham gia nghiên cứu, tư vấn và định hướng về công nghệ mới| '}, {'title': 'Your Skills and Experience', 'content': 'Có thể làm việc tại Nhật từ 2-3 năm (Làm việc tại VN 1-6 tháng trước, sau đó mới sang Nhật)| Trình độ tiếng Nhật từ N3 trở lên.| Chấp nhận các ứng viên Fresher mới ra trường, có mong muốn sang Nhật làm việc, công ty hỗ trợ toàn bộ chi phí visa, vé máy bay sang Nhật. (Nếu có 1-2 năm kinh nghiệm lập trình thì càng ưu tiên)| Có kiến thức về lập trình PHP, làm việc với: database, SQL Database.| Nếu có thêm kiến thức về React-Native, Java web thì càng tốt, không có không sao. sẽ được đào tạo.| '}, {'title': "Why You'll Love Working Here", 'content': 'Lương khởi điểm hấp dẫn, tương xứng năng lực: 700USD ~ 2000USD| Thưởng hàng năm theo kết quả công việc| Hỗ trợ toàn bộ chi phí làm visa, vé máy bay để sang Nhật làm việc.| Khám sức khỏe 1 lần/năm tại bệnh viện uy tín| Bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp theo Luật bảo hiểm.| Đồng nghiệp trẻ trung, năng động, luôn hỗ trợ và giúp đỡ nhau| Môi trường làm việc đoàn kết, cởi mở, văn minh, công bằng| Các hoạt động của Công ty: Du lịch, sinh nhật, đá bóng, thể thao, vui chơi giải trí…được tổ chức thường xuyên| Có lộ trình phát triển nghề nghiệp Career Path rõ ràng, được tạo điều kiện để phát triển nghề nghiệp theo năng lực và mong muốn cá nhân| Được hưởng chế độ đào tạo công ty: nâng cao khả năng chuyên môn,kỹ năng mềm, ngoại ngữ| Tài trợ các khóa học, lấy chứng chỉ, nâng cao kỹ năng chuyên môn| '}] 
 -------------------------------------------------- 
