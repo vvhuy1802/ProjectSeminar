@@ -26,6 +26,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/*" element={<MainContainer />} />
+          <Route path="/search" element={<h1>Search</h1>} />
         </Routes>
       </main>
       <Footer />
