@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import {Search} from "./index";
+import { Search, Value } from "./index";
 const MainContainer = () => {
   return (
     <div>
-      <Search/>
+      <Search />
+      <Value />
     </div>
   );
 };

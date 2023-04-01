@@ -8,12 +8,12 @@ li {
 
 li:hover::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 4px;
   width: 100%;
   background: #2a68ff;
   right: 0;
-  color:#2a68ff;
+  color: #2a68ff;
 }
 
 .icon {
@@ -21,7 +21,6 @@ li:hover::before {
 }
 
 .card {
-  
 }
 
 @tailwind base;
@@ -58,5 +57,10 @@ li:hover::before {
 }
 
 .card {
-  background: #000;
+  background: url(/src/assets/bg-gray.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
