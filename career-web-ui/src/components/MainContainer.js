@@ -4,8 +4,8 @@ const MainContainer = () => {
   return (
     <div>
       <Search />
-      <SuggestJob />
       <Associated />
+      <SuggestJob />
       <Value />
     </div>
   );

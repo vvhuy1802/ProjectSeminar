@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import {
   MainContainer,
@@ -13,7 +13,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { setTotalJobs } from "./redux/Slices/Global";
 function App() {
   const dispatch = useDispatch();
-
+  const [isJob, setIsJob] = useState(false);
   useEffect(() => {
     const getJobs = async () => {
       var arr = [];
@@ -22,6 +22,7 @@ function App() {
         arr.push(doc.data().data);
       });
       dispatch(setTotalJobs(arr));
+      setIsJob(true);
     };
     getJobs();
   }, []);
@@ -29,13 +30,19 @@ function App() {
   return (
     <div className="w-[90%] m-auto bg-white">
       <NavBar />
-      <main>
-        <Routes>
-          <Route path="/*" element={<MainContainer />} />
-          <Route path="/search/:search" element={<ResultSearch />} />
-          <Route path="/it-job" element={<Detail_Jobs />} />
-        </Routes>
-      </main>
+      {isJob ? (
+        <main>
+          <Routes>
+            <Route path="/*" element={<MainContainer />} />
+            <Route path="/search/:search" element={<ResultSearch />} />
+            <Route path="/it-job" element={<Detail_Jobs />} />
+          </Routes>
+        </main>
+      ) : (
+        <div className="flex justify-center items-center h-[100vh]">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+        </div>
+      )}
       <Footer />
     </div>
   );
