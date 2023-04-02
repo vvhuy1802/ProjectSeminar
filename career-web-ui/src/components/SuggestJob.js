@@ -20,7 +20,7 @@ const SuggestJob = () => {
   };
 
   const applyNow = (job_link) => {
-    console.log(job_link);
+    window.open(job_link, "_blank");
   };
 
   return (
@@ -33,8 +33,11 @@ const SuggestJob = () => {
       </div>
 
       <div className="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mt-5 ">
-        {job.map((item) => (
-          <div className="flex p-3 w-[350px] h-fit rounded-[10px] shadow-lg shadow-greyIsh-900 flex-col border-[1px]">
+        {job.map((item, index) => (
+          <div
+            key={index}
+            className="flex p-3 mt-5 w-[350px] h-fit rounded-[10px] shadow-lg shadow-greyIsh-900 flex-col border-[1px]"
+          >
             <div className="py-[1rem]">
               <h1 className="text-[18px] font-bold h-[60px]">
                 {formatName(item.job_name)}
