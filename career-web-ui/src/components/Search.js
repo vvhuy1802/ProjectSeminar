@@ -10,32 +10,61 @@ const Search = () => {
   const [search, setSearch] = useState(data?.search || "");
   const { totalJobs } = useSelector((state) => state.global);
   var arrResult = [];
+  const options = [
+    { value: "volvo", label: "All Cities" },
+    { value: "saab", label: "Ho Chi Minh" },
+    { value: "mercedes", label: "Da Nang" },
+    { value: "audi", label: "Ha Noi" },
+  ];
+  const [filter, setFilter] = useState(data?.filter || "All Cities");
+
   const handleFindJob = async () => {
+    const filterRemove = filter
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
     if (search === "") return;
     else {
       for (let i = 0; i < totalJobs.length; i++) {
         for (let j = 0; j < totalJobs[i].length; j++) {
+          const jobLocationRemove = totalJobs[i][j].location
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
           if (
             totalJobs[i][j].job_name
               .toLowerCase()
               .includes(search.toLowerCase())
           ) {
-            arrResult.push(totalJobs[i][j]);
+            if (filterRemove === "all cities") {
+              arrResult.push(totalJobs[i][j]);
+            } else {
+              if (jobLocationRemove.includes(filterRemove)) {
+                arrResult.push(totalJobs[i][j]);
+              }
+            }
           }
         }
       }
 
       if (arrResult.length === 0) {
-        alert("No result found");
+        alert("Don't have any job match with your search, please try again!");
         return;
       }
 
-      navigate(`/search/${search.toLowerCase().replace(" ", "-")}`, {
-        state: {
-          search: search,
-          result: arrResult,
+      navigate(
+        `/search/${search.toLowerCase().replace(" ", "-")}`,
+        {
+          state: {
+            search: search,
+            result: arrResult,
+            filter: filter,
+          },
         },
-      });
+        {
+          replace: true,
+        }
+      );
     }
   };
 
@@ -44,12 +73,18 @@ const Search = () => {
       <div className="flex gap-[20px]">
         <div className="flex items-center">
           <MdOutlineLocationOn className="ml-1 text-[25px] icon absolute" />
-          <select className="firstDiv flex rounded-[8px] gap-[10px] bg-white px-6 py-4 shadow-lg shadow-greyIsh-700 w-[200px]">
-            <option value="volvo">All Cities</option>
-            <option value="volvo">Ho Chi Minh</option>
-            <option value="volvo">Da Nang</option>
-            <option value="volvo">Ha Noi</option>
-            <option value="volvo">Others</option>
+          <select
+            value={filter}
+            onChange={(e) => {
+              setFilter(e.target.value);
+            }}
+            className="firstDiv flex rounded-[8px] gap-[10px] bg-white px-6 py-4 shadow-lg shadow-greyIsh-700 w-[200px]"
+          >
+            {options.map((option) => (
+              <option key={option.value} value={option.label}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
         <div className="secondDiv flex justify-between items-center rounded-[8px] gap-[10px] bg-white shadow-lg p-5 shadow-greyIsh-700 w-full h-[56px] self-center">
