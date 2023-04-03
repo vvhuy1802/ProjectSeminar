@@ -7,6 +7,14 @@ const ResultSearch = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const data = location.state;
+  const formatSearch = (str) => {
+    const a = str.split(" ");
+    const b = a.map((item) => {
+      return item[0].toUpperCase() + item.slice(1);
+    });
+    const c = b.join(" ");
+    return c;
+  };
   return (
     <div>
       <Search />
@@ -28,7 +36,11 @@ const ResultSearch = () => {
             <p className="text-black font-semibold">{data.search}</p>
           </div>
           <h1 className="text-[14px] text-[#888]">
-            {`Tìm việc làm ${data.search}, tuyển dụng ${data.search}, Tổng hợp các việc làm ${data.search} mới nhất`}
+            {`Tìm việc làm ${formatSearch(
+              data.search
+            )}, tuyển dụng ${formatSearch(
+              data.search
+            )}, Tổng hợp các việc làm ${formatSearch(data.search)} mới nhất`}
           </h1>
         </div>
 

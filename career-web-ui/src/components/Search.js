@@ -15,20 +15,34 @@ const Search = () => {
     { value: "saab", label: "Ho Chi Minh" },
     { value: "mercedes", label: "Da Nang" },
     { value: "audi", label: "Ha Noi" },
-    { value: "audi", label: "Others" },
   ];
+  const [filter, setFilter] = useState(data?.filter || "All Cities");
 
   const handleFindJob = async () => {
+    const filterRemove = filter
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
     if (search === "") return;
     else {
       for (let i = 0; i < totalJobs.length; i++) {
         for (let j = 0; j < totalJobs[i].length; j++) {
+          const jobLocationRemove = totalJobs[i][j].location
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
           if (
             totalJobs[i][j].job_name
               .toLowerCase()
               .includes(search.toLowerCase())
           ) {
-            arrResult.push(totalJobs[i][j]);
+            if (filterRemove === "all cities") {
+              arrResult.push(totalJobs[i][j]);
+            } else {
+              if (jobLocationRemove.includes(filterRemove)) {
+                arrResult.push(totalJobs[i][j]);
+              }
+            }
           }
         }
       }
@@ -44,6 +58,7 @@ const Search = () => {
           state: {
             search: search,
             result: arrResult,
+            filter: filter,
           },
         },
         {
@@ -58,9 +73,15 @@ const Search = () => {
       <div className="flex gap-[20px]">
         <div className="flex items-center">
           <MdOutlineLocationOn className="ml-1 text-[25px] icon absolute" />
-          <select className="firstDiv flex rounded-[8px] gap-[10px] bg-white px-6 py-4 shadow-lg shadow-greyIsh-700 w-[200px]">
+          <select
+            value={filter}
+            onChange={(e) => {
+              setFilter(e.target.value);
+            }}
+            className="firstDiv flex rounded-[8px] gap-[10px] bg-white px-6 py-4 shadow-lg shadow-greyIsh-700 w-[200px]"
+          >
             {options.map((option) => (
-              <option key={option.value} value={option.value}>
+              <option key={option.value} value={option.label}>
                 {option.label}
               </option>
             ))}
