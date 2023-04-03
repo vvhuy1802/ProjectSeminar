@@ -66,5 +66,40 @@ li:hover::before {
 }
 
 .firstDiv {
-cursor: pointer;
+  cursor: pointer;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.active {
+  background: #2a68ff;
+  color: white;
+  border-radius: 10%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.page-item {
+  background: #9ca0ab;
+  color: black;
+  border-radius: 10%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+

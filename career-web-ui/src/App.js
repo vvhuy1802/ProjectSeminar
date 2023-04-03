@@ -34,9 +34,10 @@ function App() {
         {isJob ? (
           <main>
             <Routes>
-              <Route path="/*" element={<MainContainer />} />
+              <Route path="/" element={<MainContainer />} />
               <Route path="/search/:search" element={<ResultSearch />} />
               <Route path="/it-job" element={<Detail_Jobs />} />
+              <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>
           </main>
         ) : (

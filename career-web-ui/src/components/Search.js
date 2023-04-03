@@ -10,6 +10,14 @@ const Search = () => {
   const [search, setSearch] = useState(data?.search || "");
   const { totalJobs } = useSelector((state) => state.global);
   var arrResult = [];
+  const options = [
+    { value: "volvo", label: "All Cities" },
+    { value: "saab", label: "Ho Chi Minh" },
+    { value: "mercedes", label: "Da Nang" },
+    { value: "audi", label: "Ha Noi" },
+    { value: "audi", label: "Others" },
+  ];
+
   const handleFindJob = async () => {
     if (search === "") return;
     else {
@@ -26,16 +34,22 @@ const Search = () => {
       }
 
       if (arrResult.length === 0) {
-        alert("No result found");
+        alert("Don't have any job match with your search, please try again!");
         return;
       }
 
-      navigate(`/search/${search.toLowerCase().replace(" ", "-")}`, {
-        state: {
-          search: search,
-          result: arrResult,
+      navigate(
+        `/search/${search.toLowerCase().replace(" ", "-")}`,
+        {
+          state: {
+            search: search,
+            result: arrResult,
+          },
         },
-      });
+        {
+          replace: true,
+        }
+      );
     }
   };
 
@@ -45,11 +59,11 @@ const Search = () => {
         <div className="flex items-center">
           <MdOutlineLocationOn className="ml-1 text-[25px] icon absolute" />
           <select className="firstDiv flex rounded-[8px] gap-[10px] bg-white px-6 py-4 shadow-lg shadow-greyIsh-700 w-[200px]">
-            <option value="volvo">All Cities</option>
-            <option value="volvo">Ho Chi Minh</option>
-            <option value="volvo">Da Nang</option>
-            <option value="volvo">Ha Noi</option>
-            <option value="volvo">Others</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
         <div className="secondDiv flex justify-between items-center rounded-[8px] gap-[10px] bg-white shadow-lg p-5 shadow-greyIsh-700 w-full h-[56px] self-center">
