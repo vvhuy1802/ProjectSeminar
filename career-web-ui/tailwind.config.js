@@ -54,6 +54,7 @@ module.exports = {
         // cardBg:'#282a2c',
         // cartitem:'#2e3033',
         // cartTotal:'#343739',
+        color_text:"#333333",
         blueColor: "#2a68ff",
         greyIsh: "#f1f4f8",
         cardShadow: "#f7f8f9",
