@@ -28,22 +28,24 @@ function App() {
   }, []);
 
   return (
-    <div className="w-[90%] m-auto bg-white">
-      <NavBar />
-      {isJob ? (
-        <main>
-          <Routes>
-            <Route path="/*" element={<MainContainer />} />
-            <Route path="/search/:search" element={<ResultSearch />} />
-            <Route path="/it-job" element={<Detail_Jobs />} />
-          </Routes>
-        </main>
-      ) : (
-        <div className="flex justify-center items-center h-[100vh]">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
-        </div>
-      )}
-      <Footer />
+    <div className="bg-[##f4f4f4}">
+      <div className="w-[90%] m-auto">
+        <NavBar />
+        {isJob ? (
+          <main>
+            <Routes>
+              <Route path="/*" element={<MainContainer />} />
+              <Route path="/search/:search" element={<ResultSearch />} />
+              <Route path="/it-job" element={<Detail_Jobs />} />
+            </Routes>
+          </main>
+        ) : (
+          <div className="flex justify-center items-center h-[100vh]">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+        )}
+        <Footer />
+      </div>
     </div>
   );
 }

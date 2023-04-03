@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { AiOutlineSearch, AiOutlineCloseCircle } from "react-icons/ai";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 const Search = () => {
-  const [search, setSearch] = useState("");
+  const location = useLocation();
   const navigate = useNavigate();
+  const data = location.state;
+  const [search, setSearch] = useState(data?.search || "");
   const { totalJobs } = useSelector((state) => state.global);
   var arrResult = [];
   const handleFindJob = async () => {
@@ -38,7 +40,7 @@ const Search = () => {
   };
 
   return (
-    <div className="searchDiv grid bg-greyIsh rounded-[10px] p-[3rem]">
+    <div className="searchDiv grid bg-greyIsh rounded-[10px] p-[2rem]">
       <div className="flex gap-[20px]">
         <div className="flex items-center">
           <MdOutlineLocationOn className="ml-1 text-[25px] icon absolute" />
@@ -59,6 +61,11 @@ const Search = () => {
               placeholder="Search Job Here..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleFindJob();
+                }
+              }}
             />
             {search && (
               <AiOutlineCloseCircle
