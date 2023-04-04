@@ -10,16 +10,32 @@ const Associated = () => {
 
       <div className="flex gap-10 justify-center items-center mt-[4rem] bg-[#D8E9F7] rounded-[10px] p-2">
         <div className="w-[120px] h-[60px] items-center flex justify-center ">
-          <img src={topcv_logo} alt="" className="w-[100px] object-contain" />
+          <a href="https://topcv.vn/">
+            <img src={topcv_logo} alt="" className="w-[100px] object-contain" />
+          </a>
         </div>
         <div className="w-[120px] h-[60px] items-center flex justify-center ">
-          <img src={itviec_logo} alt="" className="w-[100px] object-contain" />
+          <a href="https://itviec.com/">
+            <img
+              src={itviec_logo}
+              alt=""
+              className="w-[100px] object-contain"
+            />
+          </a>
         </div>
         <div className="w-[120px] h-[60px] items-center flex justify-center ">
-          <img src={vnwork_logo} alt="" className="w-[100px] object-contain" />
+          <a href="https://www.vietnamworks.com/">
+            <img
+              src={vnwork_logo}
+              alt=""
+              className="w-[100px] object-contain"
+            />
+          </a>
         </div>
         <div className="w-[120px] h-[60px] items-center flex justify-center ">
-          <img src={itjob_logo} alt="" className="w-[100px] object-contain" />
+          <a href="https://www.itjobs.com.vn/vi">
+            <img src={itjob_logo} alt="" className="w-[100px] object-contain" />
+          </a>
         </div>
       </div>
     </div>
