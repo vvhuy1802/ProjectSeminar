@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import coins_icon from "../assets/coins_icon.png";
+import { useNavigate, useLocation } from "react-router-dom";
 const SuggestJob = () => {
   const { totalJobs } = useSelector((state) => state.global);
   const [job, setJob] = React.useState([]);
+  const navigate = useNavigate();
   // count = 8 if screen width > 1024px else count = 6
   const count = window.innerWidth > 1560 ? 8 : 6;
 
@@ -15,6 +17,15 @@ const SuggestJob = () => {
       setJob((prev) => [...prev, totalJobs[a][b]]);
     }
   }, [count]);
+
+  const handleRoute = (job) => {
+    navigate(
+      `/it-job/${job.job_name.replace(/ /g, '-').replace(/-{2,}/g, '-').replace(/\//g, '-')}`,
+      {
+        state: job
+      },
+    );
+  }
 
   const formatName = (name) => {
     if (name.length > 49) {
@@ -42,7 +53,7 @@ const SuggestJob = () => {
             className="flex p-3 mt-5 w-[350px] h-fit rounded-[10px] shadow-lg shadow-greyIsh-900 flex-col border-[1px]"
           >
             <div className="py-[1rem]">
-              <h1 className="text-[18px] font-bold h-[60px]">
+              <h1 className="text-[18px] font-bold h-[60px] cursor-pointer"  onClick={() => handleRoute(item)} >
                 {formatName(item.job_name)}
               </h1>
               <div className="items-center mt-2">
