@@ -23,6 +23,11 @@ const Search = () => {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
+    //remove " " at the end of string
+    const SearchRemove = search.trim();
+    const arrSeach = SearchRemove.split(" ");
+    var count = 0;
+    setSearch(SearchRemove);
     if (search === "") return;
     else {
       for (let i = 0; i < totalJobs.length; i++) {
@@ -31,11 +36,17 @@ const Search = () => {
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
             .toLowerCase();
-          if (
-            totalJobs[i][j].job_name
-              .toLowerCase()
-              .includes(search.toLowerCase())
-          ) {
+          count = 0;
+          arrSeach.forEach((item) => {
+            if (
+              totalJobs[i][j].job_name
+                .toLowerCase()
+                .includes(item.toLowerCase())
+            ) {
+              count++;
+            }
+          });
+          if (count === arrSeach.length) {
             if (filterRemove === "all cities") {
               arrResult.push(totalJobs[i][j]);
             } else {
@@ -53,10 +64,10 @@ const Search = () => {
       }
 
       navigate(
-        `/search/${search.toLowerCase().replace(" ", "-")}`,
+        `/search/${SearchRemove.toLowerCase().replace(" ", "-")}`,
         {
           state: {
-            search: search,
+            search: SearchRemove,
             result: arrResult,
             filter: filter,
           },
