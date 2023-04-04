@@ -21,8 +21,10 @@ function App() {
       querySnapshot.forEach((doc) => {
         arr.push(doc.data().data);
       });
-      dispatch(setTotalJobs(arr));
-      setIsJob(true);
+      if (arr.length > 0) {
+        dispatch(setTotalJobs(arr));
+        setIsJob(true);
+      }
     };
     getJobs();
   }, []);
