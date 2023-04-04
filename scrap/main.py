@@ -35,23 +35,23 @@ def Get_Data(jobs, search):
         for job in jobs:
             # Link Image Company
             linkImageCompany = job.find('img').get('src')
-            # print(f'Link Image Company: {linkImageCompany}' + '\n')
+
             # Name Job
             nameJob = job.find('h3', class_='title')
             nameJob = nameJob.find('span').text
-            # print(f'Job Name: {nameJob}' + '\n')
+
             # Company Name
             companyJobName = job.find('a', class_='company').text
-            # print(f'Company Name: {companyJobName}' + '\n')
+
             # Detail Job Link
             detailJobLink = job.find('a').get('href')
-            # print(f'Detail Job Link: {detailJobLink}' + '\n')
+
             # Link to Company
             linkToCompany = job.find('a', class_='company').get('href')
-            # print(f'Link to Company: {linkToCompany}' + '\n')
+
             # Website
             website = 'TopCV'
-            # print(f'Website: {website}' + '\n')
+
             # Simple info
             infos = job.find('div', class_='label-content')
             infos = infos.find_all('label')
@@ -61,23 +61,40 @@ def Get_Data(jobs, search):
                 temp = info.text
                 if info.get('class') == ['address']:
                     address = formatContent(info.text)
-                    # print(f'Address: {address}' + '\n')
+
                 if info.get('class') == ['deadline']:
                     temp = formatContent(info.text)
                 simpleInfo.append(temp)
-            # print(f'Simple Info: {simpleInfo}' + '\n')
+
             # Job Description
             html_text = requests.get(detailJobLink).text
             soup = BeautifulSoup(html_text, 'lxml')
+            companyDescription = soup.find(
+                'div', class_='box-info-company box-white')
+            arrCompanyDescription = ''
+            if (companyDescription != None):
+                introduce = companyDescription.find('span', class_='content')
+                if (introduce != None):
+                    company = introduce.find_all('p')
+                    if (len(company) > 0):
+                        for i in range(len(company)):
+                            # decompose <br> tag
+                            for br in company[i].find_all("br"):
+                                br.replace_with("| ")
+                            # check p text includes any character
+                            if (company[i].text.strip()):
+                                if i == len(company)-1:
+                                    arrCompanyDescription += company[i].text
+                                else:
+                                    arrCompanyDescription += company[i].text + '| '
+                                    
             Description = []
             jobDescription = soup.find('div', class_='job-data')
             salary = soup.find('div', class_="box-item")
             if salary != None:
                 salary = formatContent(salary.find('span').text)
+
             titles = jobDescription.find_all('h3')
-            salary = soup.find('div', class_="box-item")
-            if salary != None:
-                salary = formatContent(salary.find('span').text)
             if (len(titles) == 0):
                 titles = jobDescription.find_all('h2')
             contents = jobDescription.find_all('div', class_='content-tab')
@@ -126,12 +143,13 @@ def Get_Data(jobs, search):
                         'content': formatContent(content.text)
                     })
                 count += 1
-            # print(f'Description: {Description}' + '\n')
+
             totalJobs.append({
                 'tag': search,
                 'image': linkImageCompany,
                 'job_name': nameJob,
                 'company_name': companyJobName,
+                'company_description': arrCompanyDescription,
                 'link_job': detailJobLink,
                 'link_company': linkToCompany,
                 'salary': salary,
@@ -140,19 +158,12 @@ def Get_Data(jobs, search):
                 'require': simpleInfo,
                 'description': Description
             })
-            break
 
 
 def Find_Jobs_In_TopCV(job_name):
     totalJobs.clear()
     search = job_name.strip().replace(" ", "-").lower()
-    # options = webdriver.ChromeOptions()
-    # options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    # driver = webdriver.Chrome(options=options)
-
     url = 'https://www.topcv.vn/tim-viec-lam-'+search+"?page=1"
-
-    # driver.get(url)
 
     try:
         html_text = requests.get(url).text
@@ -180,6 +191,8 @@ def Write_To_File(job_name):
                 f"Image Company: {job.get('image')} \n")
             f.writelines(f"Job Name: {job.get('job_name')} \n")
             f.writelines(f"Company Name: {job.get('company_name')} \n")
+            f.writelines(
+                f"Company Description: {job.get('company_description')} \n")
             f.writelines(f"Job Link: {job.get('link_job')} \n")
             f.writelines(f"Link Company: {job.get('link_company')} \n")
             f.writelines(f"Salary: {job.get('salary')} \n")
