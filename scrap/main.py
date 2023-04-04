@@ -308,6 +308,7 @@ def Find_Job_In_ITVIEC(search_key):
         html_new_page = driver.page_source  # lấy mã HTML trang web hiện tại
         bt_soup = BeautifulSoup(html_new_page, 'lxml')
         detail_job = bt_soup.find('div', class_='job-details')
+        detail_company=bt_soup.find('div',class_='employer-long-overview')
         get_require = detail_job.find_all('a', class_='big ilabel mkt-track')
         require = []
         for i in range(0, len(get_require)):
@@ -320,6 +321,7 @@ def Find_Job_In_ITVIEC(search_key):
         company_find = company.find(
             'h3', class_="employer-long-overview__name hidden-xs d-none d-sm-block")
         company_name = company_find.find('a').text
+        company_description=detail_company.find('div',class_='employer-long-overview__short-desc').text
         link_company = urlmain+company_find.find('a').get('href')
         description = []
         for i in range(0, len(title)):
@@ -339,7 +341,7 @@ def Find_Job_In_ITVIEC(search_key):
             else:
                 get_title = title[i].text
                 find = content[i-1].find_all('li')
-                if find is None:
+                if not find:
                     print("Không tìm thấy li nào!")
                     findp=content[i-1].find_all('p')
                     for k in range(0, len(findp)):
@@ -368,6 +370,7 @@ def Find_Job_In_ITVIEC(search_key):
             "web_name": "ITViec",
             "salary": salary,
             "company_name": company_name,
+            "company_description":company_description,
             "link_job": link_job,
             "link_company": link_company,
             "tag": search_key,
