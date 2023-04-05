@@ -33,6 +33,12 @@ const SuggestJob = () => {
     } else return name;
   };
 
+  const formatCompany = (name) => {
+    if (name.length > 49) {
+      return name.slice(0, 49) + "...";
+    } else return name;
+  };
+
   const applyNow = (job_link) => {
     window.open(job_link, "_blank");
   };
@@ -95,7 +101,7 @@ const SuggestJob = () => {
                     className="w-[50px] h-[50px] object-contain rounded-lg"
                   />
                   <div>
-                    <h1 className="ml-5">{item.company_name}</h1>
+                    <h1 className="ml-5">{formatCompany(item.company_name)}</h1>
                   </div>
                 </div>
               </div>
