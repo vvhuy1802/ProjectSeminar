@@ -389,8 +389,8 @@ def Find_Job_In_ITVIEC(search_key):
     data_total = {
         'data': totalJobs
     }
-    # docs = search_key.replace(" ", "_")
-    # db.collection("Totals").document(docs).set(data_total)
+    docs = search_key.replace(" ", "_")
+    db.collection("Totals").document(docs).set(data_total)
 
 
 Job_Need_To_Scrap = [
