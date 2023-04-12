@@ -58,7 +58,7 @@ const Detail_Jobs = () => {
                     </div>
                   </div>
                   <div>
-                    <button className=" mr-2 bg-blueColor p-2 w-[200px] flex items-center justify-center gap-3 rounded-[5px] ease-in-out transform hover:-translate-y-1 hover:scale-105 transition duration-500">
+                    <button className=" ml-2 bg-blueColor p-2 w-[200px] flex items-center justify-center gap-3 rounded-[5px] ease-in-out transform hover:-translate-y-1 hover:scale-105 transition duration-500">
                       <BsSend className="text-white text-2xl" />
                       <span className="text-white text-sm font-medium" onClick={()=>applyNow(item.link_job)}>
                         ỨNG TUYỂN NGAY
