@@ -1,3 +1,4 @@
+import os
 from bs4 import BeautifulSoup
 import requests
 from selenium import webdriver
@@ -8,6 +9,8 @@ from firebase_admin import firestore, firestore_async
 import firebase_admin
 from selenium.webdriver.common.by import By
 from time import sleep
+import pandas as pd
+import json
 
 credpath = 'scrap/web-scraping-67540-firebase-adminsdk-5qm46-d1a7fa09d5.json'
 
@@ -87,7 +90,7 @@ def Get_Data(jobs, search):
                                     arrCompanyDescription += company[i].text
                                 else:
                                     arrCompanyDescription += company[i].text + '| '
-                                    
+
             Description = []
             jobDescription = soup.find('div', class_='job-data')
             salary = soup.find('div', class_="box-item")
@@ -308,7 +311,7 @@ def Find_Job_In_ITVIEC(search_key):
         html_new_page = driver.page_source  # lấy mã HTML trang web hiện tại
         bt_soup = BeautifulSoup(html_new_page, 'lxml')
         detail_job = bt_soup.find('div', class_='job-details')
-        detail_company=bt_soup.find('div',class_='employer-long-overview')
+        detail_company = bt_soup.find('div', class_='employer-long-overview')
         get_require = detail_job.find_all('a', class_='big ilabel mkt-track')
         require = []
         for i in range(0, len(get_require)):
@@ -321,7 +324,8 @@ def Find_Job_In_ITVIEC(search_key):
         company_find = company.find(
             'h3', class_="employer-long-overview__name hidden-xs d-none d-sm-block")
         company_name = company_find.find('a').text
-        company_description=detail_company.find('div',class_='employer-long-overview__short-desc').text
+        company_description = detail_company.find(
+            'div', class_='employer-long-overview__short-desc').text
         link_company = urlmain+company_find.find('a').get('href')
         description = []
         for i in range(0, len(title)):
@@ -343,23 +347,25 @@ def Find_Job_In_ITVIEC(search_key):
                 find = content[i-1].find_all('li')
                 if not find:
                     print("Không tìm thấy li nào!")
-                    findp=content[i-1].find_all('p')
+                    findp = content[i-1].find_all('p')
                     for k in range(0, len(findp)):
                         for br in findp[k].find_all("br"):
                             br.replace_with("| ")
                         get_content += findp[k].text+"| "
-                    new_content = get_content.replace("\xa0", "").replace("\n", "")
+                    new_content = get_content.replace(
+                        "\xa0", "").replace("\n", "")
                     description.append({
-                    "title": get_title,
-                    "content": new_content
+                        "title": get_title,
+                        "content": new_content
                     })
                 else:
                     for k in range(0, len(find)):
                         get_content += find[k].text+"| "
-                    new_content = get_content.replace("\xa0", "").replace("\n", "")
+                    new_content = get_content.replace(
+                        "\xa0", "").replace("\n", "")
                     description.append({
-                    "title": get_title,
-                    "content": new_content
+                        "title": get_title,
+                        "content": new_content
                     })
         sleep(5)
     # trở về trang đầu tiên để lặp tiếp-
@@ -370,7 +376,7 @@ def Find_Job_In_ITVIEC(search_key):
             "web_name": "ITViec",
             "salary": salary,
             "company_name": company_name,
-            "company_description":company_description,
+            "company_description": company_description,
             "link_job": link_job,
             "link_company": link_company,
             "tag": search_key,
@@ -399,6 +405,12 @@ Job_Need_To_Scrap = [
     "Java",
 ]
 
+
+def Write_To_Excel(job):
+    df = pd.DataFrame(data=totalJobs)
+    df.to_excel(f'scrap/excels/{job}.xlsx', index=False, sheet_name='Sheet1')
+
+
 if __name__ == '__main__':
     while True:
         for job in Job_Need_To_Scrap:
@@ -411,7 +423,6 @@ if __name__ == '__main__':
                 print(e)
                 continue
             print(f"Scraping {job} done!")
-            print(f"Writing to file {job}...")
             try:
                 Write_To_File(job)
             except Exception as e:
@@ -419,6 +430,13 @@ if __name__ == '__main__':
                 print(e)
                 continue
             print(f"Writing to file {job} done!")
+            try:
+                Write_To_Excel(job)
+            except Exception as e:
+                print(f"Writing to excel {job} failed!")
+                print(e)
+                continue
+            print(f"Writing to excel {job} done!")
 
         time_wait = 24
         print(f"Waiting {time_wait} hours to scrap again")

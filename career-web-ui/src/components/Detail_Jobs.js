@@ -38,9 +38,7 @@ const Detail_Jobs = () => {
   return (
         <div className="bg-greyIsh">
           {window.scrollTo(0, 0)}
-          <div className="flex">
-            <div>
-              <div className="mx-10 py-8 bg-greyIsh hidden lg:block">
+          <div className="mx-10 py-8 bg-greyIsh hidden lg:block">
                 <div className="flex justify-between bg-white shadow-lg shadow-greyIsh-700 w-full items-center p-5">
                   <div className="flex items-center gap-16">
                     <div>
@@ -98,6 +96,8 @@ const Detail_Jobs = () => {
                   </div>
                 </div>
               </div>
+          <div className="flex">
+            <div>
               <div className="px-10 py-4 bg-greyIsh">
                 <div className="bg-white flex flex-col gap-2 shadow-lg shadow-greyIsh-700 w-full p-5">
                   <span className=" font-semibold text-[20px] text-color_text">
@@ -205,7 +205,7 @@ const Detail_Jobs = () => {
               </div>
             </div>
             <div className="hidden lg:block" >
-              <div className="w-[400px] py-8 bg-greyIsh sticky top-0 mx-5">
+              <div className="w-[400px] py-4 bg-greyIsh sticky top-0 mx-5">
                 <div className="bg-white flex flex-col gap-2 shadow-lg shadow-greyIsh-700 w-full p-5 items-center">
                   <img
                     className="w-[120px] h-[120px]"
