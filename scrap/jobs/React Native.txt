@@ -430,6 +430,24 @@ Require: ['React Native', 'JavaScript', 'ReactJS']
 Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'International working environment| Competitive compensation package and benefits| Interacting with leading-edge technologies| '}, {'title': 'Job Description', 'content': 'Application/Software design.| React Native app writing ability.| ReactJs web app writing ability.| Native Android/iOS app writing ability.| Unit tests, automation, and code reviews.| Work directly with team (service planner, technical leaders, designer, engineers…) to figure out user’s needs, problems; expectations to contribute ideas & solution as well as to realize/ resolve them.| Deliver outputs with expected quality, speed, compliance in order to bring the best values to product/service’s end users.| Mentor or coach junior/middle members if needed to achieve a certain level of competency or performance to meet project’s objectives.| '}, {'title': 'Your Skills and Experience', 'content': 'A bachelor’s degree in Computer Science/Information Technology or equivalent.| At least 3 years of experience in React native development.| Working experience with React Native, ReactJs, JavaScript, ES6+, React Hooks, Redux, Redux Toolkit.| Good knowledge HTML, CSS, and JavaScript fundamentals and software design best practices.| Experience with handling Node package deployment to registries.| Plus for NodeJs Express and MySQL.| Knowledge in Object-Oriented and functional programming, Design Patterns, MVP, MVVM, Clean Architecture.| Agile mindset.| English communication (TOEIC ~550 and above).| Understand the importance of writing high Maintainable Code, Clean Code (SOLID Principles).| Read code to and write design document (Sequence Diagram, Class Diagram, UML..).| Have experience in writing Unit Tests.| Have experience in training other members.| Good vision of quality, scalability, performance, security, and function.| Honest and have a positive attitude towards people.| Good at communication skills in general and English skills in particular.| Willing to learn new technologies and handle a problem in a logical, analytical way.| '}, {'title': "Why You'll Love Working Here", 'content': 'Unique opportunity to work with multinational team of Hitachi in over 130 countries.| Incomparable chance to participate in full Software Development Life Cycle (SDLCs) and comprehensive soft skills training.| Competitive remuneration with attractive allowances & bonuses.| Opportunities for advanced career development overseas, including the US, Japan...| Competitive & attractive compensation and benefits packages:Allowance for English, Japanese language certifications.Subsidy for transportation and meals.13th salary & BonusAdditional Premium Health Insurance Package for employees.Company trip for employees.| Allowance for English, Japanese language certifications.| Subsidy for transportation and meals.| 13th salary & Bonus| Additional Premium Health Insurance Package for employees.| Company trip for employees.| Being an integral part of a dynamic and fast growing global enterprise.| An open, professional and nourishing environment with out-side of work activities, such as football, tennis, badminton, dancing, music, and charity.| '}] 
 -------------------------------------------------- 
 Tag: React Native 
+<<<<<<< HEAD
+Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGRxRWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2dc244a3ec76d482d8067606ca6a058e223465fa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--d92c0e864c4429e9d0ed68ed6233d8baecafcd3f/GHN%20logo.jpg 
+Job Name: Senior Mobile Developer (React Native/ Android/ iOS) 
+Company Name: GHN 
+Company Description: 
+GHN is now in top 3 last-mile delivery service provider for e-commerce business in Vietnam
+ 
+Job Link: https://itviec.com//it-jobs/senior-mobile-developer-react-native-android-ios-ghn-3116?lab_feature=preview_jd_page 
+Link Company: https://itviec.com//companies/ghn 
+Salary: You'll love it 
+Website: ITViec 
+Location: Ho Chi Minh 
+Require: ['React Native', 'Android', 'iOS'] 
+Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Macbook Pro| Every single person plays a key role| Trust and transparency| '}, {'title': 'Job Description', 'content': 'Collaborate with cross-functional teams to design, develop and ship new features.| Optimize the system for reliability and performance.| Fix bugs and improve the system.| Write unit test code to prevent similar bugs Responsibility to resolve bugs as soon as possible.| Provide methodology and metrics to monitor the system.| Improve performance, the reliability of the system.| Contribute knowledge to the technical team.| Review team member code.| Write clean, modular, robust code to implement the desired requirements with little or no supervision| Contribute ideas for making the application better and easier to use| '}, {'title': 'Your Skills and Experience', 'content': '4+ yearsof experience as a Mobile Engineer.| Good experience inNativeCode (iOS or Android) is a prerequisite requirement and willing to change to React Native.| Familiarity withOOPdesign principles.| Knowledge with JavaScript and strong in algorithm.| Have a mindset to the customer-oriented is a big plus.| '}, {'title': "Why You'll Love Working Here", 'content': 'Working at Top 3 Logistic Company in Vietnam.| 100% salary on probation.| Receive 13th month salary + Performance bonus + KPI bonus (at least 14th month salary / year)| Attractive development career path (Quarter Promotion Programme)| Review salary twice a year.| Participate in 100% of Insurance on monthly salary.| Generali Healthcare Insurance for employee and a periodical health check every year.| MacBook Pro is provided.| Monthly Happy Hour party.| Annual Company Outing Trip.| Being entertained with billiards, play station in working area.| '}] 
+-------------------------------------------------- 
+Tag: React Native 
+=======
+>>>>>>> 02593103247a6ebe9b9c14e9f5eca7d319a111b4
 Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN3V5TkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a2642446b5579d4c19be78e574751f90fa8a24a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--d92c0e864c4429e9d0ed68ed6233d8baecafcd3f/download%20(1).jpg 
 Job Name: Mobile App Developer (React Native, iOS/Android) 
 Company Name: LHD TECH 
@@ -505,6 +523,8 @@ Require: ['React Native', 'OOP', 'UI-UX']
 Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Môi trường làm việc lý tưởng| Đào tạo và phát triển| Quyền lợi ngập tràn| '}, {'title': 'Job Description', 'content': '- Xây dựng mobile app cross-platform trên React Native framework| - Phát triển thêm các modules theo yêu cầu| - Hoàn thiện trải nghiệm người dùng (UX)| | | '}, {'title': 'Your Skills and Experience', 'content': '- Có kinh nghiệm tối thiểu 2 năm lập trình mobile app cross-platform với React Native framework| - Nắm vững kiến thức về OOP, Design Pattern. Hiểu biết về UI/UX.| - Có kinh nghiệm làm việc với Git, Jira, Figma| - Có kinh nghiệm tích hợp: FB, GG, Zalo APIs, MoMo, GG maps APIs, FireBase| - Có kinh nghiệm lập trình mobile app trên các nền tảng cross-platform (Flutter/Ionic) khác là một lợi thế| - Có kinh nghiệm lập trình giao tiếp giữa mobile với server qua các giao thức TCP/IP, Firebase, Websocket, WebService và JSON/XML| - Nhiệt tình trong công việc và chủ động trao đổi, học hỏi| '}, {'title': "Why You'll Love Working Here", 'content': '- Môi trường làm việc năng động, sáng tạo và chuyên nghiệp.| - Lương, phụ cấp, thưởng dự án, thưởng cuối năm CỰC HẤP DẪN| - Hưởng đầy đủ chế độ phúc lợi theo luật lao động| - Đào tạo nâng cao năng lực| - Tham gia các hoạt động giao lưu, văn hóa, team building, du lịch…| - Cơ hội thăng tiến rộng mở| '}] 
 -------------------------------------------------- 
 Tag: React Native 
+<<<<<<< HEAD
+=======
 Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGRxRWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2dc244a3ec76d482d8067606ca6a058e223465fa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--d92c0e864c4429e9d0ed68ed6233d8baecafcd3f/GHN%20logo.jpg 
 Job Name: Senior Mobile Developer (React Native/ Android/ iOS) 
 Company Name: GHN 
@@ -520,6 +540,7 @@ Require: ['React Native', 'Android', 'iOS']
 Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Macbook Pro| Every single person plays a key role| Trust and transparency| '}, {'title': 'Job Description', 'content': 'Collaborate with cross-functional teams to design, develop and ship new features.| Optimize the system for reliability and performance.| Fix bugs and improve the system.| Write unit test code to prevent similar bugs Responsibility to resolve bugs as soon as possible.| Provide methodology and metrics to monitor the system.| Improve performance, the reliability of the system.| Contribute knowledge to the technical team.| Review team member code.| Write clean, modular, robust code to implement the desired requirements with little or no supervision| Contribute ideas for making the application better and easier to use| '}, {'title': 'Your Skills and Experience', 'content': '4+ yearsof experience as a Mobile Engineer.| Good experience inNativeCode (iOS or Android) is a prerequisite requirement and willing to change to React Native.| Familiarity withOOPdesign principles.| Knowledge with JavaScript and strong in algorithm.| Have a mindset to the customer-oriented is a big plus.| '}, {'title': "Why You'll Love Working Here", 'content': 'Working at Top 3 Logistic Company in Vietnam.| 100% salary on probation.| Receive 13th month salary + Performance bonus + KPI bonus (at least 14th month salary / year)| Attractive development career path (Quarter Promotion Programme)| Review salary twice a year.| Participate in 100% of Insurance on monthly salary.| Generali Healthcare Insurance for employee and a periodical health check every year.| MacBook Pro is provided.| Monthly Happy Hour party.| Annual Company Outing Trip.| Being entertained with billiards, play station in working area.| '}] 
 -------------------------------------------------- 
 Tag: React Native 
+>>>>>>> 02593103247a6ebe9b9c14e9f5eca7d319a111b4
 Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBME83TVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b23bdd77861f6d654e692c462cec83b26723dae5/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--d92c0e864c4429e9d0ed68ed6233d8baecafcd3f/download-logo-vector-central%20retail-mien-phi.jpg 
 Job Name: Mobile Developer (React Native, English, JavaScript) 
 Company Name: Central Retail 
@@ -536,12 +557,20 @@ Description: [{'title': 'Top 3 Reasons To Join Us', 'content': 'Top 3 biggest Re
 -------------------------------------------------- 
 Tag: React Native 
 Image Company: https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0tmSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c0fe0ff712a458d81ebedefb0b36172418e2834d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RTNKbGMybDZaVjloYm1SZmNHRmtXd2RwUm1sRyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--a9d835d302ad9f096170a85b9d142ff095a42b9d/Black%20(3).png 
+<<<<<<< HEAD
+Job Name: Senior React Native Developer (Night Shift) - $3000 
+=======
 Job Name: Senior React Native Developer (Night Shift) - $3900 
+>>>>>>> 02593103247a6ebe9b9c14e9f5eca7d319a111b4
 Company Name: Saigon Technology 
 Company Description: 
 A fast growing software development company in Viet Nam
  
+<<<<<<< HEAD
+Job Link: https://itviec.com//it-jobs/senior-react-native-developer-night-shift-saigon-technology-4944?lab_feature=preview_jd_page 
+=======
 Job Link: https://itviec.com//it-jobs/senior-react-native-developer-night-shift-3900-saigon-technology-1203?lab_feature=preview_jd_page 
+>>>>>>> 02593103247a6ebe9b9c14e9f5eca7d319a111b4
 Link Company: https://itviec.com//companies/saigon-technology 
 Salary: Up to $3,000 
 Website: ITViec 
