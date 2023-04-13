@@ -10,7 +10,6 @@ import firebase_admin
 from selenium.webdriver.common.by import By
 from time import sleep
 import pandas as pd
-import json
 
 credpath = 'scrap/web-scraping-67540-firebase-adminsdk-5qm46-d1a7fa09d5.json'
 
@@ -19,12 +18,6 @@ credpath = 'scrap/web-scraping-67540-firebase-adminsdk-5qm46-d1a7fa09d5.json'
 firebase_admin.initialize_app(credentials.Certificate(credpath))
 
 db = firestore.client()
-
-# reading data from firebase
-data = {"name": "Los Angeles", "state": "CA", "country": "USA"}
-
-# Add a new doc in collection 'cities' with ID 'LA'
-# db.collection("cities").document("LA").set(data)
 
 totalJobs = []
 
