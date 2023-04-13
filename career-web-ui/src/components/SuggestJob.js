@@ -9,6 +9,16 @@ const SuggestJob = () => {
   // count = 8 if screen width > 1024px else count = 6
   const count = window.innerWidth > 1560 ? 8 : 6;
 
+  const formatJobName = (name) => {
+    return name
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ /g, "-")
+      .replace(/-{2,}/g, "-")
+      .replace(/\//g, "-")
+      .toLowerCase();
+  };
+
   useEffect(() => {
     setJob([]);
     for (let i = 0; i < count; i++) {
@@ -20,7 +30,7 @@ const SuggestJob = () => {
 
   const handleRoute = (job) => {
     navigate(
-      `/it-job/${job.job_name.replace(/ /g, '-').replace(/-{2,}/g, '-').replace(/\//g, '-')}`,
+      `/it-job/${formatJobName(job.job_name)}`,
       {
         state: job
       },

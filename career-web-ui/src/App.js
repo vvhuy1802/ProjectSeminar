@@ -38,7 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainContainer />} />
               <Route path="/search/:search" element={<ResultSearch />} />
-              <Route path="/it-job/:job_name" element={<Detail_Jobs />} />
+              <Route path="/it-job/:job_name" element={<div className="pb-10"><Detail_Jobs /></div>} />
               <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>
           </main>
